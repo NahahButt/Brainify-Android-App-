@@ -14,5 +14,5 @@ Brainify - An Android learning app with interactive quizzes, MCQ assessments, su
 - Android SDK
 
 ## Developer
-Nahah Butt
-Muhammad TalhaSS
+- Nahah Butt
+- Muhammad Talha
