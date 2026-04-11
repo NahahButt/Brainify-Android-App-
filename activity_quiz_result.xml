@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/quizResultScroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="?android:attr/windowBackground">
+
+    <LinearLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Trophy Icon (Will be added programmatically) -->
+        <!-- Space reserved for trophy -->
+        <Space
+            android:id="@+id/trophySpace"
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvResultTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="🎉 QUIZ COMPLETED 🎉"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/purple_500"/>
+
+        <!-- Score Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/scoreCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:gravity="center">
+
+                <!-- Score -->
+                <TextView
+                    android:id="@+id/tvScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0/0"
+                    android:textSize="48sp"
+                    android:textStyle="bold"
+                    android:textColor="#FF5722"/>
+
+                <!-- Message -->
+                <TextView
+                    android:id="@+id/tvMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Loading..."
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/purple_500"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Stats Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/stats_background"
+            android:padding="16dp">
+
+            <!-- Correct -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvCorrect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="#4CAF50"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Correct"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+            <!-- Wrong -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvWrong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="#F44336"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wrong"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+            <!-- Time -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="#2196F3"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Action Items Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+            <!-- Back to Home -->
+            <LinearLayout
+                android:id="@+id/btnHomeContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="16dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/tvHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🏠 Back to Home"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/purple_500"/>
+
+            </LinearLayout>
+
+            <!-- Download PDF -->
+            <LinearLayout
+                android:id="@+id/btnDownloadPdf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="16dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/tvDownloadPdf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📄 Download Result PDF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#2196F3"/>
+
+            </LinearLayout>
+
+            <!-- Share Result -->
+            <LinearLayout
+                android:id="@+id/btnShareContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="16dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/tvShare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📤 Share Result"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#4CAF50"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

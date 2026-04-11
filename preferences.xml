@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:title="Appearance"
+        app:iconSpaceReserved="false">
+
+
+        <ListPreference
+            android:key="theme"
+            android:title="App Theme"
+            android:summary="Selected theme"
+            android:entries="@array/theme_entries"
+            android:entryValues="@array/theme_values"
+            android:defaultValue="light"
+            app:iconSpaceReserved="false" />
+
+        <ListPreference
+            android:key="font_size"
+            android:title="Text Font Size"
+            android:summary="Adjust app text size"
+            android:entries="@array/font_sizes"
+            android:entryValues="@array/font_size_values"
+            android:defaultValue="16"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Notifications &amp; Sound"
+        app:iconSpaceReserved="false">
+
+        <SwitchPreferenceCompat
+            android:key="notifications"
+            android:title="Enable Notifications"
+            android:summary="Receive Alert"
+            android:defaultValue="true"
+            app:iconSpaceReserved="false" />
+
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Support"
+        app:iconSpaceReserved="false">
+
+        <Preference
+            android:key="help"
+            android:title="Help &amp; Feedback"
+            android:summary="Get Help and Send us your feedback"
+            app:iconSpaceReserved="false" />
+
+        <Preference
+            android:key="logout"
+            android:title="Logout"
+            android:summary="Sign out Brainify"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/windowBackground">
+
+    <!-- ✅ Simple Professional Toolbar (Box Removed) -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/profileToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:title="Profile"
+        app:titleTextColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileToolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- PROFILE PICTURE SECTION -->
+            <RelativeLayout                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp">
+
+                <!-- ✅ Elevation removed and Shape changed to Circle to remove the box effect -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivProfilePic"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_default_profile"
+                     />
+
+                <TextView
+                    android:id="@+id/tvEditProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ivProfilePic"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="12dp"
+                    android:text="Edit Profile Picture"
+                    android:textColor="#2196F3"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <!-- USERNAME -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Username"
+                    android:textStyle="bold"
+                    android:textColor="?android:attr/textColorPrimary" />
+                <TextView
+                    android:id="@+id/tvEditUsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="Edit"
+                    android:textColor="#2196F3"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+            <EditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_text_background"
+                android:paddingStart="15dp"
+                android:enabled="false"
+                android:textColor="?android:attr/textColorPrimary"
+                android:hint="Enter username" />
+
+            <!-- EMAIL -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Email"
+                android:textStyle="bold"
+                android:textColor="?android:attr/textColorPrimary" />
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:text="email@example.com"
+                android:textColor="?android:attr/textColorSecondary" />
+
+            <!-- PHONE -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Phone Number"
+                android:textStyle="bold"
+                android:textColor="?android:attr/textColorPrimary" />
+            <TextView
+                android:id="@+id/tvPhone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:text="0300XXXXXXX"
+                android:textColor="?android:attr/textColorSecondary" />
+
+            <!-- PASSWORD -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Password"
+                    android:textStyle="bold"
+                    android:textColor="?android:attr/textColorPrimary" />
+                <TextView
+                    android:id="@+id/tvEditPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="Edit"
+                    android:textColor="#2196F3"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp">
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/edit_text_background"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="45dp"
+                    android:enabled="false"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:inputType="textPassword"
+                    android:hint="Password" />
+                <ImageView
+                    android:id="@+id/ivEye"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="10dp"
+                    android:padding="5dp"
+                    android:src="@android:drawable/ic_menu_view"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <!-- ACTION BUTTONS -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCancel"
+                    android:layout_width="0dp"
+                    android:layout_height="55dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:text="Cancel"
+                    android:visibility="gone"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    app:cornerRadius="12dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSaveChanges"
+                    android:layout_width="0dp"
+                    android:layout_height="55dp"
+                    android:layout_weight="1"
+                    android:text="Save"
+                    android:visibility="gone"
+                    app:cornerRadius="12dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

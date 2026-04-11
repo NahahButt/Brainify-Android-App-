@@ -1,0 +1,16 @@
+<resources>
+    <style name="Theme.Brainify" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Brand Colors -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Backgrounds for Light Mode -->
+        <item name="android:windowBackground">@color/white</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="android:textColorPrimary">@color/black</item>
+
+        <!-- Status Bar -->
+        <item name="android:statusBarColor">@color/purple_700</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Notifications Switch -->
+    <androidx.preference.SwitchPreferenceCompat
+        android:key="notifications"
+        android:title="Enable Notifications"
+        android:summary="Turn on/off app notifications"
+        android:defaultValue="true" />
+
+    <!-- Sound Effects Switch -->
+    <androidx.preference.SwitchPreferenceCompat
+        android:key="sound_effects"
+        android:title="Enable Sound Effects"
+        android:summary="Turn on/off sound effects"
+        android:defaultValue="true" />
+
+    <!-- ✅ Theme List (Sirf Light show hoga box mein) -->
+    <androidx.preference.ListPreference
+        android:key="theme"
+        android:title="App Theme"
+        android:summary="Theme is set to Light mode"
+        android:entries="@array/theme_entries"
+        android:entryValues="@array/theme_values"
+        android:defaultValue="light" />
+
+    <!-- Help & Support -->
+    <androidx.preference.Preference
+        android:key="help"
+        android:title="Help &amp; Support"
+        android:summary="Contact: talha.skg2@gmail.com" />
+
+    <!-- Logout -->
+    <androidx.preference.Preference
+        android:key="logout"
+        android:title="Logout"
+        android:summary="Sign out of your account" />
+
+</androidx.preference.PreferenceScreen>

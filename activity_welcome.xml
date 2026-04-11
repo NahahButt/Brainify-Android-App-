@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="?android:attr/windowBackground">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="164dp"
+        android:layout_height="140dp"
+        android:layout_marginBottom="24dp"
+        android:contentDescription="App Logo"
+        android:src="@drawable/brain_logo2" />
+
+    <TextView
+        android:id="@+id/tvAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BRAINIFY"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tvTagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Learn • Play • Grow"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>

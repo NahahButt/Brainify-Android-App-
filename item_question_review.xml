@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="?android:attr/windowBackground">
+
+    <!-- Question Number -->
+    <TextView
+        android:id="@+id/tvQuestionNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Q1"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/black"/>
+
+    <!-- Question Text -->
+    <TextView
+        android:id="@+id/tvQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Question here"
+        android:textSize="16sp"
+        android:paddingBottom="8dp"
+        android:textColor="@color/black"/>
+
+    <!-- Options as CheckBoxes -->
+    <CheckBox
+        android:id="@+id/cbOptionA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="A. Option 1"
+        android:layout_marginBottom="4dp"/>
+
+    <CheckBox
+        android:id="@+id/cbOptionB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="B. Option 2"
+        android:layout_marginBottom="4dp"/>
+
+    <CheckBox
+        android:id="@+id/cbOptionC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="C. Option 3"
+        android:layout_marginBottom="4dp"/>
+
+    <CheckBox
+        android:id="@+id/cbOptionD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="D. Option 4"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Explanation -->
+    <TextView
+        android:id="@+id/tvExplanation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Explanation goes here"
+        android:textSize="14sp"
+        android:textColor="#757575"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Difficulty -->
+    <TextView
+        android:id="@+id/tvDifficulty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Difficulty: Medium"
+        android:textSize="12sp"
+        android:textColor="#757575"
+        android:layout_marginTop="2dp"/>
+
+</LinearLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Brainify</string>
+
+    <!-- Basic App Strings -->
+    <string name="app_tagline">Learn Smart, Score High</string>
+    <string name="welcome_message">Welcome to Brainify</string>
+    <string name="loading">Loading...</string>
+
+    <!-- Login/Register Strings -->
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="full_name">Full Name</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="dont_have_account">Don\'t have an account? Register</string>
+    <string name="already_have_account">Already have an account? Login</string>
+
+    <!-- Subject Strings -->
+    <string name="subject_networking">Networking</string>
+    <string name="subject_machine_learning">Machine Learning</string>
+    <string name="subject_cloud_computing">Cloud Computing</string>
+    <string name="subject_parallel_computing">Parallel Computing</string>
+    <string name="subject_web_development">Web Development</string>
+    <string name="subject_accounting">Accounting</string>
+
+    <!-- Quiz Strings -->
+    <string name="quiz">Quiz</string>
+    <string name="time_left">Time Left</string>
+    <string name="question">Question</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="submit">Submit</string>
+    <string name="finish">Finish</string>
+
+    <!-- Result Strings -->
+    <string name="quiz_result">Quiz Result</string>
+    <string name="score">Score</string>
+    <string name="percentage">Percentage</string>
+    <string name="correct">Correct</string>
+    <string name="wrong">Wrong</string>
+    <string name="time_taken">Time Taken</string>
+    <string name="back_to_home">Back to Home</string>
+    <string name="restart_quiz">Restart Quiz</string>
+    <string name="share_result">Share Result</string>
+
+    <!-- Settings Strings -->
+    <string name="settings">Settings</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="enable_dark_mode">Enable dark theme</string>
+    <string name="notifications">Notifications</string>
+    <string name="sound_effects">Sound Effects</string>
+    <string name="voice_feedback">Voice Feedback</string>
+    <string name="app_version">App Version</string>
+    <string name="logout">Logout</string>
+
+    <!-- ✅ Fixed/Added for SettingsActivity.kt & MainActivity -->
+    <string name="help_feedback">Help &amp; Feedback</string>
+    <string name="alert">Alert</string>
+    <string name="share_app">Share App</string>
+    <string name="share_app_message">Check out Brainify - The best quiz app!</string>
+    <string name="confirm_logout">Are you sure you want to sign out?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="cancel">Cancel</string>
+    <string name="leaderboard">Leaderboard</string> <!-- ✅ Added missing key -->
+
+    <!-- Profile Strings -->
+    <string name="profile">Profile</string>
+    <string name="my_profile">My Profile</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="achievements">Achievements</string> <!-- ✅ Added for Profile -->
+
+    <!-- Font Sizes -->
+    <string name="font_size_small">Small</string>
+    <string name="font_size_medium">Medium</string>
+    <string name="font_size_large">Large</string>
+    <string name="font_size_extra_large">Extra Large</string>
+</resources>

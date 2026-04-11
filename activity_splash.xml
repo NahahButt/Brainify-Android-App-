@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_gradient_bg"
+    tools:context=".SplashActivity">
+
+    <!-- Parent Layout for Logo and Text to keep them centered together -->
+    <LinearLayout
+        android:id="@+id/centerContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45">
+
+        <!-- App Logo (Now perfectly centered) -->
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:contentDescription="App Logo"
+            android:src="@drawable/brain_logo2"
+            android:elevation="10dp"
+            android:padding="10dp"
+            android:background="@android:color/transparent"/>
+
+        <!-- App Name (Right below logo) -->
+        <TextView
+            android:id="@+id/txtWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:letterSpacing="0.05"
+            android:text="Brainify"
+            android:textColor="@android:color/white"
+            android:textSize="42sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Progress Indicator (Placed below the center content) -->
+
+    <!-- Tagline (At the bottom) -->
+
+    <ProgressBar
+        android:id="@+id/loadingProgress"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="10dp"
+        android:layout_height="163dp"
+        android:layout_marginTop="144dp"
+        android:indeterminateTint="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/centerContainer" />
+
+    <TextView
+        android:id="@+id/txtLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Focus on action, belief, and self-worth"
+        android:textSize="14sp"
+        android:textColor="#E0E0E0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="32dp"
+        android:alpha="0.8"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

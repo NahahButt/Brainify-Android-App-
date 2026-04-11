@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Purple Shades -->
+    <color name="purple_200">#BB86FC</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+
+    <!-- Standard Colors -->
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- Missing Colors Fix -->
+    <color name="sky_blue">#03A9F4</color> <!-- ic_delete.xml ke liye -->
+    <color name="background">#F5F5F5</color> <!-- Saari activity layouts ke liye -->
+
+    <!-- Dark Mode Specific (Optional but good to have) -->
+    <color name="background_light">#F5F5F5</color>
+    <color name="background_dark">#121212</color>
+    <color name="card_dark">#1E1E1E</color>
+
+    <!-- Other colors used in your app -->
+    <color name="facebookBlue">#1877F2</color>
+    <color name="red">#F44336</color>
+    <color name="green">#4CAF50</color>
+    <color name="blue">#2196F3</color>
+    <color name="orange">#FF9800</color>
+    <color name="yellow">#FFEB3B</color>
+    <color name="grey">#757575</color>
+    <color name="gray">#757575</color>
+</resources>
